@@ -1,0 +1,10 @@
+{
+  "orderType": "STANDARD",
+  "currency": "USD",
+  "items": [
+    {
+      "sku": "SKU-1001",
+      "quantity": 1
+    }
+  ]
+}

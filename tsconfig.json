@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "strict": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["node", "@playwright/test", "vitest/globals"],
+    "outDir": "dist",
+    "rootDir": "."
+  },
+  "include": ["config", "data", "tests", "utils", "playwright.config.ts"],
+  "exclude": ["node_modules", "dist"]
+}

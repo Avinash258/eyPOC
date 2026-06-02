@@ -1,0 +1,53 @@
+{
+  "name": "qa-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Unified Quality Engineering Framework with TypeScript and Node.js",
+  "engines": {
+    "node": ">=20 <24"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint . --ext .ts",
+    "test:unit": "vitest run tests/unit",
+    "test:api": "playwright test \"tests\\/api\\/.*\\.spec\\.ts\"",
+    "test:e2e": "playwright test \"tests\\/e2e\\/.*\\.spec\\.ts\"",
+    "test:api-ui": "playwright test \"tests\\/api\\/.*\\.spec\\.ts|tests\\/e2e\\/.*\\.spec\\.ts\"",
+    "test:api-ui:smoke": "playwright test \"tests\\/api\\/.*\\.spec\\.ts|tests\\/e2e\\/.*\\.spec\\.ts\" --grep @smoke",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:sanity": "playwright test --grep @sanity",
+    "test:contract": "node scripts/ensure-pact-runtime.cjs && tsx tests/contract/consumer.pact.spec.ts && tsx tests/contract/provider.verification.spec.ts",
+    "test:perf": "k6 run tests/perf/smoke.k6.js",
+    "test:monitoring": "playwright test tests/monitoring",
+    "test:all": "npm run lint && npm run test:unit && npm run test:contract && npm run test:api && npm run test:e2e && npm run test:perf && npm run test:monitoring",
+    "data:generate": "tsx data/seeders/export-users.ts",
+    "allure:generate": "allure generate ./reports/allure-results --clean -o ./reports/allure-report",
+    "allure:open": "allure open ./reports/allure-report"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.0.3",
+    "@playwright/test": "^1.54.1",
+    "ajv": "^8.17.1",
+    "axios": "^1.8.2",
+    "csv-writer": "^1.6.0",
+    "dotenv": "^16.4.7",
+    "pino": "^9.6.0"
+  },
+  "devDependencies": {
+    "@grpc/grpc-js": "^1.14.3",
+    "@grpc/proto-loader": "^0.8.1",
+    "@pact-foundation/pact": "^16.3.0",
+    "@pact-foundation/pact-core-windows-x64": "^19.1.0",
+    "@types/node": "^22.13.4",
+    "@typescript-eslint/eslint-plugin": "^8.25.0",
+    "@typescript-eslint/parser": "^8.25.0",
+    "allure-commandline": "^2.34.0",
+    "allure-playwright": "^3.2.1",
+    "eslint": "^8.57.1",
+    "graphql": "^16.14.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
+}
