@@ -1,0 +1,56 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: tests\api\users.api.spec.ts >> API Automation - Users >> PUT brands list method not allowed @regression
+- Location: tests\api\users.api.spec.ts:19:7
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 405
+Received: 200
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from "@playwright/test";
+  2  | import { constants } from "../../config/constants";
+  3  | 
+  4  | test.describe("API Automation - Users", () => {
+  5  |   test(`GET products list ${constants.tags.smoke}`, async ({ request }) => {
+  6  |     const response = await request.get("/api/productsList");
+  7  |     expect(response.status()).toBe(200);
+  8  |     const body = await response.text();
+  9  |     expect(body.toLowerCase()).toContain("products");
+  10 |   });
+  11 | 
+  12 |   test(`POST products list method not allowed ${constants.tags.sanity}`, async ({ request }) => {
+  13 |     const response = await request.post("/api/productsList", {
+  14 |       form: { search_product: "top" }
+  15 |     });
+  16 |     expect(response.status()).toBe(405);
+  17 |   });
+  18 | 
+  19 |   test(`PUT brands list method not allowed ${constants.tags.regression}`, async ({ request }) => {
+  20 |     const response = await request.put("/api/brandsList", {
+  21 |       form: { brand: "Polo" }
+  22 |     });
+> 23 |     expect(response.status()).toBe(405);
+     |                               ^ Error: expect(received).toBe(expected) // Object.is equality
+  24 |   });
+  25 | 
+  26 |   test(`DELETE brands list method not allowed ${constants.tags.regression}`, async ({ request }) => {
+  27 |     const response = await request.delete("/api/brandsList");
+  28 |     expect(response.status()).toBe(405);
+  29 |   });
+  30 | });
+  31 | 
+```

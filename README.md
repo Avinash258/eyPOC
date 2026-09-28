@@ -1,8 +1,8 @@
-# Playtest â€” Unified Quality Engineering Framework (`qa-platform`)
+# Playtest Ã¢â‚¬â€ Unified Quality Engineering Framework (`qa-platform`)
 
 Business-readable test authoring compiled onto the **Playwright** runtime, with API, contract, performance and monitoring layers in one TypeScript platform.
 
-> Public Playtest / no-codeâ€“low-code engine sample Â· [Portfolio](https://avinash258.github.io/Protfolio/)
+> Public Playtest / no-codeÃ¢â‚¬â€œlow-code engine sample Ã‚Â· [Portfolio](https://avinash258.github.io/portfolio/)
 
 ## Overview
 
@@ -10,22 +10,22 @@ Production-oriented quality automation platform built with **TypeScript + Node.j
 
 ## What it covers
 
-- **UI / E2E** â€” Playwright with shared config, fixtures and utilities
-- **API automation** â€” reusable client with retry and smoke/regression packs
-- **Contract testing** â€” consumer + provider verification (Pact)
-- **Performance & monitoring** â€” dedicated npm scripts for perf and monitoring runs
-- **Reporting** â€” Allure generation and open flows
-- **CI-ready** â€” pipelines folder for Azure / GitHub-style delivery
+- **UI / E2E** Ã¢â‚¬â€ Playwright with shared config, fixtures and utilities
+- **API automation** Ã¢â‚¬â€ reusable client with retry and smoke/regression packs
+- **Contract testing** Ã¢â‚¬â€ consumer + provider verification (Pact)
+- **Performance & monitoring** Ã¢â‚¬â€ dedicated npm scripts for perf and monitoring runs
+- **Reporting** Ã¢â‚¬â€ Allure generation and open flows
+- **CI-ready** Ã¢â‚¬â€ pipelines folder for Azure / GitHub-style delivery
 
 ## Stack
 
 | Layer | Technology |
 |---|---|
-| Language | TypeScript Â· Node.js |
+| Language | TypeScript Ã‚Â· Node.js |
 | UI | Playwright |
 | Contracts | Pact |
 | Reporting | Allure |
-| Quality | ESLint Â· shared configs |
+| Quality | ESLint Ã‚Â· shared configs |
 
 ## Getting started
 
@@ -52,11 +52,11 @@ docs/       design notes
 mocks/      stubs / fixtures
 pipelines/  CI definitions
 scripts/    helper scripts
-tests/      UI Â· API Â· contract suites
+tests/      UI Ã‚Â· API Ã‚Â· contract suites
 utils/      shared clients and helpers
 ```
 
 ## Author
 
-**Avinash Sharma** â€” QA Automation Architect / Lead SDET  
-[GitHub](https://github.com/Avinash258) Â· [LinkedIn](https://www.linkedin.com/in/p-avinash-sharma-8b0203b9/) Â· [Portfolio](https://avinash258.github.io/Protfolio/)
+**Avinash Sharma** Ã¢â‚¬â€ QA Automation Architect / Lead SDET  
+[GitHub](https://github.com/Avinash258) Ã‚Â· [LinkedIn](https://www.linkedin.com/in/p-avinash-sharma-8b0203b9/) Ã‚Â· [Portfolio](https://avinash258.github.io/portfolio/)
