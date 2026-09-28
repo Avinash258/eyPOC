@@ -1,8 +1,8 @@
-# Playtest — Unified Quality Engineering Framework (`qa-platform`)
+# Playtest â€” Unified Quality Engineering Framework (`qa-platform`)
 
 Business-readable test authoring compiled onto the **Playwright** runtime, with API, contract, performance and monitoring layers in one TypeScript platform.
 
-> Public Playtest / no-code–low-code engine sample · [Portfolio](https://avinash258.github.io/Protfolio/)
+> Public Playtest / no-codeâ€“low-code engine sample Â· [Portfolio](https://avinash258.github.io/Protfolio/)
 
 ## Overview
 
@@ -10,22 +10,22 @@ Production-oriented quality automation platform built with **TypeScript + Node.j
 
 ## What it covers
 
-- **UI / E2E** — Playwright with shared config, fixtures and utilities
-- **API automation** — reusable client with retry and smoke/regression packs
-- **Contract testing** — consumer + provider verification (Pact)
-- **Performance & monitoring** — dedicated npm scripts for perf and monitoring runs
-- **Reporting** — Allure generation and open flows
-- **CI-ready** — pipelines folder for Azure / GitHub-style delivery
+- **UI / E2E** â€” Playwright with shared config, fixtures and utilities
+- **API automation** â€” reusable client with retry and smoke/regression packs
+- **Contract testing** â€” consumer + provider verification (Pact)
+- **Performance & monitoring** â€” dedicated npm scripts for perf and monitoring runs
+- **Reporting** â€” Allure generation and open flows
+- **CI-ready** â€” pipelines folder for Azure / GitHub-style delivery
 
 ## Stack
 
 | Layer | Technology |
 |---|---|
-| Language | TypeScript · Node.js |
+| Language | TypeScript Â· Node.js |
 | UI | Playwright |
 | Contracts | Pact |
 | Reporting | Allure |
-| Quality | ESLint · shared configs |
+| Quality | ESLint Â· shared configs |
 
 ## Getting started
 
@@ -52,11 +52,11 @@ docs/       design notes
 mocks/      stubs / fixtures
 pipelines/  CI definitions
 scripts/    helper scripts
-tests/      UI · API · contract suites
+tests/      UI Â· API Â· contract suites
 utils/      shared clients and helpers
 ```
 
 ## Author
 
-**Pushanshu Avinash Sharma** — QA Automation Architect / Lead SDET  
-[GitHub](https://github.com/Avinash258) · [LinkedIn](https://www.linkedin.com/in/p-avinash-sharma-8b0203b9/) · [Portfolio](https://avinash258.github.io/Protfolio/)
+**Avinash Sharma** â€” QA Automation Architect / Lead SDET  
+[GitHub](https://github.com/Avinash258) Â· [LinkedIn](https://www.linkedin.com/in/p-avinash-sharma-8b0203b9/) Â· [Portfolio](https://avinash258.github.io/Protfolio/)
